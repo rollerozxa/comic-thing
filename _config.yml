@@ -1,0 +1,31 @@
+title: Webcomic
+description: "Some Webcomic"
+url: https://voxelmanip.se
+
+baseurl: /
+
+lang: en_GB
+
+permalink: pretty
+paginate: 10
+paginate_path: /page/:num/
+
+sass:
+  style: compressed
+  sourcemap: never
+
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  typographic_symbols:
+    hellip: "..."
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag

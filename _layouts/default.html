@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+	{% seo %}
+	
+	<link rel="stylesheet" href="/assets/style.css">
+	<script src="/assets/script.js"></script>
+</head>
+<body>
+
+
+	<header>
+		<div class="title"><a href="/">{{ site.title }}!!</a></div>
+
+		<nav>
+			<a href="/">Home</a>
+			<a href="/">Comic List</a>
+			<a href="/">Topics</a>
+			<a href="/">Characters</a>
+			<a href="/">About</a>
+			
+		</nav>
+	</header>
+	
+	<article class="container">
+		{{ content }}
+	</article>
+
+	
+
+	<footer>
+		Footer...
+
+		<button id="toggledarkmode">toggle dark mode</button>
+	</footer>
+
+	
+</body>
+</html>
