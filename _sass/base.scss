@@ -34,10 +34,34 @@ body {
 
 a {
 	text-decoration: none;
+	color: blue;
 }
 
 .dark-mode {
-	filter: invert(1);
+	body {
+		background-color: #111;
+		color: white;
+	}
+
+	a {
+		color: yellow;
+	}
+
+	nav, article, footer {
+		border: 2px solid white;
+		background-color: #245667;
+	}
+
+	nav {
+		a:hover {
+			background-color: #111;
+		}
+	}
+
+	// Invert comic images (white -> black, black -> white)
+	.comic {
+		filter: invert(1);
+	}
 }
 
 nav, article, footer {
