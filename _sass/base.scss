@@ -81,20 +81,50 @@ nav, article, footer {
 	a {
 		text-decoration: none;
 	}
-	
 }
 
 nav {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	gap: 25px 25px;
+	gap: 25px 15px;
 	font-size: 14pt;
-	
+
+	#hamburger-btn {
+		display: none;
+	}
+
 	a {
 		display: inline-block;
 		//border: 2px solid pink;
-		padding: 10px;
+		padding: 10px 20px;
+
+		&:hover { background-color: #eee; }
+	}
+}
+
+// Make navigation bar vertical on mobile
+@media (max-width: 640px) {
+	nav {
+		display: block;
+
+		a {
+			display: none;
+		}
+
+		#hamburger-btn {
+			// "Three lines" vector icon, inlined into CSS for performance.
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 96 960 960' width='48'%3E%3Cpath d='M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z' fill='white' /%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: right;
+
+			&:hover {
+				filter: brightness(0.8);
+			}
+		}
+		#hamburger-btn, .show-mobile {
+			display: block;
+		}
 	}
 }
 

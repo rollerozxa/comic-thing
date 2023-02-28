@@ -40,12 +40,33 @@ if (getCookie('darkmode') === "true") {
 	toggleDark();
 }
 
+var menuVis = false; // hamburger menu visible (on mobile)
+
+// Wrap event listeners inside window.onload as this script gets run in <head>
+// to prevent FOUC with the dark mode that happens when it is put at the end
 window.onload = function () {
+
+	// Dark mode toggle button
 	document.getElementById('toggledarkmode').addEventListener('click', function (e) {
 		darkmode = !darkmode;
 		setCookie('darkmode', darkmode, 365);
 
 		toggleDark();
 	});
-};
 
+	// Hamburger menu button
+	document.getElementById('hamburger-btn').addEventListener('click', function (e) {
+		// Get array of nav links
+		var navLinks = document.querySelectorAll("nav a");
+		// Iterate over 'em
+		for (var i = 0; i < navLinks.length; i++) {
+			var link = navLinks[i];
+			if (link.id == 'hamburger-btn') continue; // Don't touch the hamborger (no touch!)
+
+			link.classList.toggle('show-mobile');
+
+		}
+
+		menuVis = !menuVis;
+	});
+};
