@@ -22,6 +22,10 @@ kramdown:
 defaults:
   - scope:
       path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
