@@ -73,6 +73,14 @@ nav, article, footer {
 	padding: 7px;
 }
 
+footer {
+	text-align: center;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
 .title {
 	text-align: center;
 	font-size: 42pt;
@@ -133,6 +141,7 @@ $btnbg: #fafafa;
 #toggledarkmode {
 	background-color: $btnbg;
 	border: 2px solid black;
+	font-size: 14pt;
 	padding: 7px 15px;
 
 	&:hover {
