@@ -149,22 +149,37 @@ nav {
 	}
 }
 
-$btnbg: #fafafa;
 
-#toggledarkmode {
-	background-color: $btnbg;
+/// Neat looking buttons. \\\
+
+#toggledarkmode, a.btn, .btn-dis {
+	color: black;
 	border: 2px solid black;
 	font-size: 14pt;
 	padding: 7px 15px;
-
-	&:hover {
-		background-color: darken($btnbg, 10%);
-	}
-
-	&:active {
-		background-color: darken($btnbg, 25%);
-	}
+	margin: 0px 5px;
+	display: inline-block;
 }
+
+$btnbg: #fafafa;
+
+#toggledarkmode, a.btn {
+	background-color: $btnbg;
+
+	&:hover  { background-color: darken($btnbg, 10%); }
+	&:active { background-color: darken($btnbg, 25%); }
+}
+
+.btn-dis {
+	background-color: darken($btnbg, 30%);
+}
+
+.separator {
+	display: inline-block;
+	width: 42px;
+}
+
+/// Make comic container horizontally scrollable on mobile to prevent stretching the layout \\\
 
 .comiccontainer {
 	display: flex;

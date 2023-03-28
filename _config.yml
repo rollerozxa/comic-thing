@@ -17,6 +17,11 @@ kramdown:
   typographic_symbols:
     hellip: "..."
 
+collections:
+  comics:
+    output: true
+    layout: comic
+
 defaults:
   - scope:
       path: ""
@@ -24,9 +29,9 @@ defaults:
       layout: "default"
   - scope:
       path: ""
-      type: "posts"
+      type: "comics"
     values:
-      layout: "post"
+      layout: "comic"
 
 plugins:
   - jekyll-paginate
