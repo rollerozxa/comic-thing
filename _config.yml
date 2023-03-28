@@ -7,8 +7,6 @@ baseurl: /
 lang: en_GB
 
 permalink: pretty
-paginate: 10
-paginate_path: /page/:num/
 
 sass:
   style: compressed
