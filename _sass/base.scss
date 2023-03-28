@@ -126,17 +126,26 @@ nav {
 
 		#hamburger-btn {
 			// "Three lines" vector icon, inlined into CSS for performance.
-			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 96 960 960' width='48'%3E%3Cpath d='M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z' fill='white' /%3E%3C/svg%3E");
+			// (Light mode - icon is black)
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 96 960 960' width='48'%3E%3Cpath d='M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z' fill='black' /%3E%3C/svg%3E");
 			background-repeat: no-repeat;
 			background-position: right;
 
 			&:hover {
-				filter: brightness(0.8);
+				filter: invert(0.5);
 			}
 		}
+
 		#hamburger-btn, .show-mobile {
 			display: block;
 		}
+	}
+
+	.dark-mode nav #hamburger-btn {
+		// (Dark mode - icon is white)
+		background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 96 960 960' width='48'%3E%3Cpath d='M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z' fill='white' /%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right;
 	}
 }
 
