@@ -2,4 +2,20 @@
 layout: default
 ---
 
-<a href="/comics/3/">temp</a>
+{% assign comic = site.comics.last %}
+
+<h1>{{ comic.title }}</h1>
+
+<p>
+	<a class="btn" href="/comics/1/">&laquo; First</a>
+	<a class="btn" href="/comics/{{ comic.num | minus:1 }}/">&lt; Prev</a>
+
+	<span class="separator"></span>
+
+	<span class="btn-dis">&gt; Next</span>
+	<span class="btn-dis">&raquo; Last</span>
+</p>
+
+<div class="comiccontainer">
+	<img class="comic" src="/comic_images/{{ comic.num }}.png">
+</div>
