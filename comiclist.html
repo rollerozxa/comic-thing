@@ -1,0 +1,11 @@
+---
+title: Comic List
+---
+
+<h1>Comic List</h1>
+
+<ol>
+{% for comic in site.comics %}
+	<li><strong><a href="{{ comic.url }}">{{ comic.title }}</a></strong></li>
+{% endfor %}
+</ol>
