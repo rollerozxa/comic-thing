@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
+<h1 class="center">{{ page.title }}</h1>
 
-<p>
+<p class="center">
 	{% if page.num != 1 %}
 		<a class="btn" href="/comics/1/">&laquo; First</a>
 		<a class="btn" href="/comics/{{ page.num | minus:1 }}/">&lt; Prev</a>

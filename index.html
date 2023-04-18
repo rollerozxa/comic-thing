@@ -4,9 +4,9 @@ layout: default
 
 {% assign comic = site.comics.last %}
 
-<h1>{{ comic.title }}</h1>
+<h1 class="center">{{ comic.title }}</h1>
 
-<p>
+<p class="center">
 	<a class="btn" href="/comics/1/">&laquo; First</a>
 	<a class="btn" href="/comics/{{ comic.num | minus:1 }}/">&lt; Prev</a>
 

@@ -37,9 +37,26 @@ a {
 	color: blue;
 }
 
+h1 { font-size: 1.80em; }
+h2 { font-size: 1.50em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1.00em; }
+
+h1,h2,h3,h4 {
+	margin-top: 10px;
+}
+
 p {
 	line-height: 1.6;
 }
+
+ul, ol {
+	li {
+		margin: 20px 0px;
+	}
+}
+
+.center { text-align: center; }
 
 .dark-mode {
 	body {
@@ -186,7 +203,8 @@ $btnbg: #fafafa;
 	flex-wrap: nowrap;
 	overflow-x: auto;
 
-	img {
+	.comic {
+		margin: auto;
 		flex: 0 0 auto;
 	}
 }
