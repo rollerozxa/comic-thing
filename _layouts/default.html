@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
@@ -16,13 +16,13 @@
 		<div class="title"><a href="/">{{ site.title }}!!</a></div>
 
 		<nav>
-			<a href="#" id="hamburger-btn">&nbsp;</a>
+			<a href="#" id="hamburger-btn" aria-label="Toggle navigation">&nbsp;</a>
+
 			<a href="/">Home</a>
 			<a href="/comiclist/">Comic List</a>
 			<a href="/topics/">Topics</a>
 			<a href="/characters/">Characters</a>
 			<a href="/about/">About</a>
-			
 		</nav>
 	</header>
 	
